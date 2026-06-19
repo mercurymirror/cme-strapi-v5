@@ -507,6 +507,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     publishing_date: Schema.Attribute.Date;
     size: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'title'>;
+    sold_out: Schema.Attribute.Boolean;
     status: Schema.Attribute.Enumeration<['draft', 'published']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'published'>;

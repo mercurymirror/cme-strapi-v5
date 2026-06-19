@@ -23,7 +23,11 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": ["files", "images", "videos"]
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ]
     },
     "slug": {
       "type": "uid",
@@ -31,9 +35,12 @@
     },
     "status": {
       "type": "enumeration",
-      "enum": ["draft", "published"],
+      "required": true,
       "default": "published",
-      "required": true
+      "enum": [
+        "draft",
+        "published"
+      ]
     },
     "New": {
       "type": "boolean"
@@ -63,7 +70,9 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "pages": {
       "type": "integer"
@@ -78,7 +87,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "design": {
       "type": "string"
@@ -88,6 +99,9 @@
     },
     "stripe_price_id": {
       "type": "string"
+    },
+    "sold_out": {
+      "type": "boolean"
     }
   }
 }
