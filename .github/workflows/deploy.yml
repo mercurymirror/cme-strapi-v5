@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-      
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
@@ -36,5 +36,7 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
+            cd ~/cme-strapi-v5
+            git pull origin main
             docker pull ghcr.io/mercurymirror/cme-strapi-v5:latest
-            docker compose -f ~/cme-strapi-v5/docker-compose.prod.yml up -d
+            docker compose -f docker-compose.prod.yml up -d
